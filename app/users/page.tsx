@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from 'react'
-import { useGetUsersQuery } from '@/store/features/users/usersSlice';
 import { Card, CardContent, CircularProgress, Container, Grid, List, ListItem, ListItemText, Typography } from '@mui/material';
 import UpdateUserForm from '@/components/UpdateUser';
+import { useGetUsersQuery } from '@/lib/features/users/usersApiSlice';
 
 const OPTIONS = [5, 10, 15];
 

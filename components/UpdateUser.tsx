@@ -1,4 +1,5 @@
-import { useUpdateUserMutation } from "@/store/features/users/usersSlice";
+
+import { useUpdateUserMutation } from "@/lib/features/users/usersApiSlice";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material";
 import { FormEvent, FormEventHandler, useState } from "react";
 
