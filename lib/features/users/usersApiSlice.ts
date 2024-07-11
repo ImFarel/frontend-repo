@@ -1,5 +1,5 @@
 // Need to use the React-specific entry point to import `createApi`
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 
 interface UsersApiResponse {
   users: User[];
@@ -9,10 +9,6 @@ interface UsersApiResponse {
 export const usersApiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:9000/api/",
-    headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyOVFXU3ZNMkp6RmpGaThRSU5mRiIsImVtYWlsIjoiZW1haTIxMTIzbCIsIm5hbWUiOiJURVNUIiwiaWF0IjoxNzIwNjkxNzAxLCJleHAiOjE3MjA3MjA1MDF9.NIJQTjnMnABX0DLx9bh2O726BpQ8Em2PE9sFB1hRekI",
-    },
   }),
   reducerPath: "usersApi",
   // Tag types are used for caching and invalidation.
