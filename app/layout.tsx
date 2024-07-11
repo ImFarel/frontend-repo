@@ -19,12 +19,13 @@ export default function RootLayout({
     <StoreProvider>
       <html lang="en">
         <body>
-          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          <AppRouterCacheProvider options={{ enableCssLayer: true, key: 'css' }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
               {children}
             </ThemeProvider>
-          </AppRouterCacheProvider></body>
+          </AppRouterCacheProvider>
+        </body>
       </html>
     </StoreProvider>
   );
